@@ -1,0 +1,19 @@
+<template name="tAll">
+  <h2>All Players</h2>
+{{#if cAll}}
+  <ol>
+    {{#each cAll}}
+      <li>
+        {{firstName}} <span class="badge">{{gerseyNumber}}</span> 
+        {{> tRemoveEditPlayer}}
+        <!-- <ul>
+          <li>{{fieldPosition}}</li>
+        </ul> -->
+      </li>
+    {{/each}}
+  </ol>
+
+{{else}}
+<p>no starting players</p>
+{{/if}}
+</template>

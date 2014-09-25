@@ -1,0 +1,20 @@
+<template name="tRoster">
+<h2>Game Day Roster</h2>
+
+{{#if cRoster}}
+  <ol>
+    {{#each cRoster}}
+      <li>
+        {{firstName}} <span class="badge">{{gerseyNumber}}</span> 
+        {{> tRemoveEditPlayer}}
+        <!-- <ul>
+          <li>{{fieldPosition}}</li>
+        </ul> -->
+      </li>
+    {{/each}}
+  </ol>
+
+{{else}}
+<p>no starting players</p>
+{{/if}}
+</template>

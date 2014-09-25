@@ -1,0 +1,15 @@
+<template name="tStarters">
+<h2>Starters</h2>
+{{#if cStarters}}
+  <ol>
+    {{#each cStarters}}
+      <li>
+        {{firstName}} <span class="badge">{{gerseyNumber}}</span> 
+        {{> tRemoveEditPlayer}}
+      </li>
+    {{/each}}
+  </ol>
+{{else}}
+no subs
+{{/if}}
+</template>

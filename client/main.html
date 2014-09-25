@@ -1,0 +1,38 @@
+<head>
+  <title>Lineupbuilder!</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Civitas FC</h1>
+    {{> loginButtons}} 
+    {{#if currentUser}}
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      {{> tRoster}} {{> tFormerPlayers}}
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      {{> tField}}
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      {{> tAddPlayer}} {{> tNotPlaying}} {{> tSubs}}
+    </div>   
+    <div>
+    {{> tAll}}
+    </div>
+    {{else}}
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      {{> tRoster}}
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      {{> tField}}
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+     {{> tStarters}} 
+     {{> tSubs}}
+    </div>
+ 
+    {{/if}}
+
+  </div>
+  <!-- END .container -->
+</body>

@@ -1,0 +1,15 @@
+<template name="tNotPlaying">
+  <h2>Out This Week</h2>
+{{#if missingPlayers}}
+  <ol>
+    {{#each cPlayersOff}}
+      <li>
+        {{firstName}} <span class="oweStuff">{{moneyOwed}}</span><span class="badge">{{gerseyNumber}}</span>
+        {{> tRemoveEditPlayer}}
+      </li>
+    {{/each}}
+  </ol>
+{{else}}
+no subs
+{{/if}}
+</template>
